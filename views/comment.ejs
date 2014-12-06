@@ -1,0 +1,35 @@
+<br/>
+
+<%
+	if(typeof post.comments !== 'undefined'){
+	post.comments.forEach(function(comment,index){
+%>
+<p><a href="<%=comment.website%>"><%=comment.name%></a>
+	<span class="info">comment at <%=comment.time%></span>
+</p>
+<p><%-comment.content%></p>
+<%});
+	}
+%>
+
+<% 
+	var isLog = false;
+	if(typeof user === 'undefined' || user === null) { 
+	}else{
+		isLog = true;
+	}
+%>
+
+<form method="POST">
+	<% if(isLog) {%>
+	name:<input type="text" name="name" value="<%=user.name%>" /><br/>
+	email:<input type="email" name="email" value="<%=user.email%>" /><br/> 
+	site:<input type="text" name="website" value="/u/<%=user.name%>" /><br/>
+	<% }else{ %>
+	name:<input type="text" name="name"/><br/>
+	email:<input type="email" name="email"/><br/> 
+	site:<input type="text" name="website" value="http://" /><br/>
+	<% } %>
+	<textarea name="content" rows="5" cols="80"></textarea><br/>
+	<input type="submit" value="comment" />
+</form>

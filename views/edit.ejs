@@ -1,0 +1,11 @@
+<%-include header%>
+
+<form method="post">
+	title:<br/>
+	<input type="text" name="title" value="<%=post.title%>" disabled="disabled" />
+	article:<br/>
+	<textarea name="post" rows="10" cols="100"><%=post.post%></textarea><br/>
+	<input type="submit" value="save" />
+</form>
+
+<%-include footer%>

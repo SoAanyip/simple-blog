@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Blog</title>
+		<link rel="stylesheet" href="/stylesheets/reset.css">
+		<link rel="stylesheet" href="/stylesheets/style.css">
+
+		<% 
+			var isLog = false;
+			if(typeof user === 'undefined' || user === null) { 
+			}else{
+				isLog = true;
+			}
+		%>
+
+	</head>
+	<body>
+		<div id="stableHead">
+			<div id="userInfo">
+				<%if(isLog) {%>
+				<img class="userImg" title="<%=user.name%>" alt="userImg" src="/images/head1.jpg" />
+				<label class="userName"><%=user.name%></label>
+				<%}else{%>
+				<label class="userName">please login</label>
+				<%}%>
+			</div>
+		</div>
+		<header>
+			<h1><%=title%></h1>
+		</header>
+		<nav>
+			<span><a title="homePage" href="/">home</a></span>
+			<% if(!isLog) { %>
+				<span><a title="login" href="/login">login</a></span>
+				<span><a title="register" href="/reg">register</a></span>
+			<% }else{ %>
+				<span><a title="post" href="/post">post</a></span>
+				<span><a title="logout" href="/logout">logout</a></span>
+			<% } %>
+			<span><form action="/search" method="GET"><input type="text" name="keyword" placeholder="search!" class="search" /></form></span>
+		</nav>
+		<article>
+			<% if(typeof success !== 'undefined'){ %>
+				<div id="success"><%= success %></div>
+			<% } %>
+			<% if(typeof error !== 'undefined'){ %>
+				<div id="error"><%= error %></div>
+			<% } %>

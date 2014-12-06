@@ -1,0 +1,10 @@
+<br/>
+<div>
+<% if(!isFirstPage){%>
+	<span class="prepage"><a title="preview" href="?p=<%=page-1%>">preview</a></span>
+<% } %>
+
+<% if(!isLastPage){ %>
+	<span class="nextpage"><a title="forview" href="?p=<%=page+1%>">forview</a></span>
+<% } %>
+</div>

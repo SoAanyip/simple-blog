@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+body {
+	width: auto;
+	
+	margin:60px 0 2em 12em;
+	padding: 0 2em;
+	font: 14px "Microsoft YaHei", Helvetica, Arial, sans-serif;
+}
+p{
+	line-height: 24px;
+	margin: 1em 0;
+}
+header{
+	padding: .5em 0;
+	border-bottom: 1px solid #ccc;
+}
+nav{
+	position: fixed;
+	left: 3em;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	width: 9em;
+	text-align: center;
+}
+nav a{
+	display: block;
+	text-decoration: none;
+	padding: .7em 1em;
+	color: #333;
+}
+nav a:hover{
+	background-color: #f00;
+	color: #f9f9f9;
+	-webkit-transition:color .2s linear;
+}
+
+article{
+	font-size: 16px;
+	padding-top: .5em;
+}
+article a{
+	color: #d00;
+	text-decoration: none;
+}
+article a:hover{
+	color: #333;
+	text-decoration: underline;
+}
+article.post{
+	background-color: #efefef;
+}
+.info{
+	font-size: 14px;
+}
+h1{
+	font-size: 20px;
+	font-weight: bold;
+}
+#stableHead{
+	position: fixed;
+	top:0;
+	left: 0;
+	height: 60px;
+	width: 100%;
+	margin: 0 auto;
+	border-bottom: 1px solid #ccc;
+	background-color: #efefef;
+}
+#userInfo{
+	float: right;
+	margin:5px 100px 0 0;
+}
+img.userImg{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	-o-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+
+}
+label.userName{
+	font-size: 16px;
+}
+
+.edit{
+	margin: 3px;
+	padding: 2px 5px;
+	border-radius: 3px;
+	-o-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	background-color: #f3f3f3;
+	font-size: 13px;
+}
+.edit:hover{
+	text-decoration: none;
+	background-color: #f00;
+	color: #fff;
+	-webkit-transition:color .2s linear;
+}
+
+.prepage a{
+	float: left;
+	text-decoration: none;
+	padding: .5em 1em;
+	color: #f00;
+	font-weight: bold;
+}
+
+.nextpage a{
+	float: right;
+	text-decoration: none;
+	padding: .5em 1em;
+	color: #f00;
+	font-weight: bold;
+}
+.prepage a:hover, .nextpage a:hover{
+	text-decoration: none;
+	background-color: #f00;
+	color: #f9f9f9;
+	-webkit-transition:color .2s linear;
+}
+.search{
+	width:6em;
+	text-align: center;
+	font-size: 1em;
+	margin: 0.5em 0;
+}
+
+.archive{
+	list-style: none;
+	line-height: 28px;
+}
+.archive h3{
+	margin: 0.5em 0;
+}
+.archive time{
+	float: left;
+	font-size: 14px;
+	color: #999;
+	margin-right: 1.2em;
+}

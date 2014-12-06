@@ -1,0 +1,32 @@
+[Thu Nov 27 2014 16:51:11 GMT+0800 (中国标准时间)]/login
+TypeError: Object function model(doc, fields, skipId) {
+    if (!(this instanceof model))
+      return new model(doc, fields, skipId);
+    Model.call(this, doc, fields, skipId);
+  } has no method 'fineOne'
+    at Function.User.getAll (D:\HTMLfile\classes\classNode\blog\models\user.js:70:12)
+    at D:\HTMLfile\classes\classNode\blog\routes\index.js:117:8
+    at callbacks (D:\HTMLfile\classes\classNode\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\HTMLfile\classes\classNode\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\HTMLfile\classes\classNode\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\HTMLfile\classes\classNode\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\HTMLfile\classes\classNode\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (D:\HTMLfile\classes\classNode\blog\routes\index.js:337:3)
+    at callbacks (D:\HTMLfile\classes\classNode\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\HTMLfile\classes\classNode\blog\node_modules\express\lib\router\index.js:138:11)
+[Thu Nov 27 2014 16:54:19 GMT+0800 (中国标准时间)]/reg
+TypeError: Object function model(doc, fields, skipId) {
+    if (!(this instanceof model))
+      return new model(doc, fields, skipId);
+    Model.call(this, doc, fields, skipId);
+  } has no method 'fineOne'
+    at Function.User.getAll (D:\HTMLfile\classes\classNode\blog\models\user.js:70:12)
+    at D:\HTMLfile\classes\classNode\blog\routes\index.js:87:8
+    at callbacks (D:\HTMLfile\classes\classNode\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\HTMLfile\classes\classNode\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\HTMLfile\classes\classNode\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\HTMLfile\classes\classNode\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\HTMLfile\classes\classNode\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (D:\HTMLfile\classes\classNode\blog\routes\index.js:337:3)
+    at callbacks (D:\HTMLfile\classes\classNode\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\HTMLfile\classes\classNode\blog\node_modules\express\lib\router\index.js:138:11)

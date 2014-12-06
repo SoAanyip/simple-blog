@@ -1,0 +1,51 @@
+<%- include header%>
+
+<% 
+	var isLog = false;
+	if(typeof user === 'undefined' || user === null) { 
+	}else{
+		isLog = true;
+	}
+%>
+
+<% if(isLog && (user.name === post.name)) {%>
+	<span><a class="edit" href="/edit/<%=post.name%>/<%=post.time.day%>/<%=post.title%>">edit</a></span>
+	<span><a class="edit" href="/remove/<%=post.name%>/<%=post.time.day%>/<%=post.title%>">delete</a></span>
+<%}%>
+
+<% 
+var flag = 1;
+
+if(isLog && (user.name !== post.name)) {
+	if((post.reprint_info.reprint_from !== undefined) && (user.name == post.reprint_info.reprint_from.name)){
+		flag = 0;
+	}
+	if(post.reprint_info.reprint_to != undefined) {
+		post.reprint_info.reprint_to.forEach(function(reprint_to,index){
+			if(user.name == reprint_to.name){
+				flag = 0;
+			}
+		})
+	}
+} else{
+	flag = 0;
+}
+if(flag){ %>
+	
+	<span><a class="edit" href="/reprint/<%=post.name%>/<%=post.time.day%>/<%=post.title%>">reprint</a></span>
+		
+<%}%>
+
+
+<p class="info">
+	author:<a href="/u/<%=post.name%>"><%=post.name%></a> | 
+	date:<%=post.time.minute%>  |
+	<%if(post.reprint_info.reprint_from){%>
+		<a href="/u/<%=post.reprint_info.reprint_from.name%>/<%=post.reprint_info.reprint_from.day%>/<%=post.reprint_info.reprint_from.title%>">retweeted from?</a>
+	<% } %>
+</p>
+<p><%-post.post%></p>
+
+<%- include comment%>
+
+<%- include footer%>
